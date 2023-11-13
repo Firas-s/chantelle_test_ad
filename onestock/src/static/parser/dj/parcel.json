@@ -1,0 +1,31 @@
+{
+    "id": "id",
+    "date": "get_timestamp()-date",
+    "last_update": "get_timestamp()-last_update",
+    "order_id": "order_id",
+    "state": "state",
+    "shipment": {
+        "external_carrier": "shipment.external_carrier",
+        "id": "shipment.id",
+        "tracking_code": "shipment.tracking_code",
+        "tracking_link": "shipment.tracking_link",
+        "transporter": "shipment.transporter"
+    },
+    "carrier": {
+        "name": "delivery.carrier.name",
+        "delivery_mode": "delivery.carrier.information.delivery_mode",
+        "option": "delivery.carrier.option"
+    },
+    "destination": {
+        "city": "delivery.destination.address.city",
+        "zipcode": "delivery.destination.address.zip_code",
+        "country": "delivery.destination.address.regions.country.code",
+        "email": "delivery.destination.address.contact.email",
+        "first_name": "delivery.destination.address.contact.first_name",
+        "last_name": "delivery.destination.address.contact.last_name",
+        "phone_number": "delivery.destination.address.contact.phone_number",
+        "title": "delivery.destination.address.contact.title",
+        "address": "get_split()-delivery.destination.address.lines",
+        "store_id": "delivery.destination.endpoint_id"
+    }
+}

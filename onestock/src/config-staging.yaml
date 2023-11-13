@@ -1,0 +1,17 @@
+onestock:
+  url: https://api.onestock-retail.com/v2/search_orders
+  #chat: https://chat.googleapis.com/v1/spaces/AAAA0bV_4s0/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=e_NB_o-5wbiPHgsxlQdwwVX5Zshkd863Qt2RaJc1CL8%3D
+  chat: https://chat.googleapis.com/v1/spaces/AAAA_lM8SDk/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=py4MZRqwWoMEg90vXT5Pb59HAe51LfB-L6LTeVqmZhM%3D
+  limit: 50
+  delta: 60
+  batch: 300
+
+firestore:
+  project: flows-onestock-dev
+  collection: onestock
+
+bigquery:
+  project: flows-onestock-dev
+  dataset: ingestion
+  table_dj: orders_dj
+  table_cl: orders_cl

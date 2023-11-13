@@ -1,0 +1,54 @@
+{
+    "id": "id",
+    "creation_date": "get_timestamp()-date",
+    "last_update": "get_timestamp()-last_update",
+    "ingestion_date": "get_ingestion()",
+    "state": "state",
+    "customer": {
+        "email": "customer.email",
+        "first_name": "customer.first_name",
+        "id": "customer.id",
+        "last_name": "customer.last_name",
+        "phone_number": "customer.phone_number",
+        "title": "customer.title"
+    },
+    "delivery": {
+        "address": "get_split()-delivery.destination.address.lines",
+        "city": "delivery.destination.address.city",
+        "zipcode": "delivery.destination.address.zip_code",
+        "country": "delivery.destination.address.regions.country.code",
+        "email": "delivery.destination.address.contact.email",
+        "first_name": "delivery.destination.address.contact.first_name",
+        "last_name": "delivery.destination.address.contact.last_name",
+        "phone_number": "delivery.destination.address.contact.phone_number",
+        "title": "delivery.destination.address.contact.title",
+        "relay_point": "delivery.destination.address.information.relay_point",
+        "type": "delivery.type",
+        "store_id": "delivery.destination.endpoint_id"
+    },
+    "sales_channel": "sales_channel",
+    "information": {
+        "delivery_mode": "information.delivery_mode",
+        "delivery_pickup_id": "information.delivery_pickup_id",
+        "message": "information.message_personnel"
+    },
+    "parcels": "get_parcels()-parcels",
+    "payment": {
+        "currency": "pricing_details.currency",
+        "price": "get_decimal()-pricing_details.price",
+        "contact": {
+            "address": "get_split()-pricing_details.address.lines",
+            "city": "pricing_details.address.city",
+            "zipcode": "pricing_details.address.zip_code",
+            "country": "pricing_details.address.regions.country.code",
+            "email": "pricing_details.address.contact.email",
+            "first_name": "pricing_details.address.contact.first_name",
+            "last_name": "pricing_details.address.contact.last_name",
+            "phone_number": "pricing_details.address.contact.phone_number",
+            "title": "pricing_details.address.contact.title"
+        }
+    },
+    "items": "get_items()-order_items",
+    "items_group": "get_items_group()-line_item_groups",
+    "shipping_fees": "get_shipping()-shipping_fees"
+}

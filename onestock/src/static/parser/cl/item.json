@@ -1,0 +1,10 @@
+{
+    "id":"id",
+    "product_id": "item_id",
+    "quantity": "quantity",
+    "pricing": {
+        "currency":"pricing_details.currency",
+        "original_price":"get_decimal()-pricing_details.original_price",
+        "price":"get_decimal()-pricing_details.price"
+    } 
+}

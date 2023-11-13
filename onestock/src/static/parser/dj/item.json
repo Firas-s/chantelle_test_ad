@@ -1,0 +1,11 @@
+{
+    "id":"id",
+    "product_id": "item_id",
+    "quantity": "quantity",
+    "origin_endpoint_id": "information.origin_endpoint_id",
+    "pricing": {
+        "currency":"pricing_details.currency",
+        "original_price":"get_decimal()-pricing_details.original_price",
+        "price":"get_decimal()-pricing_details.price"
+    } 
+}
